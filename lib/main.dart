@@ -50,6 +50,7 @@ class HomeScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only( left: 20, right: 30),
               child: TextField(
+                keyboardType: TextInputType.text,
                 decoration: InputDecoration(hintText: "Search Photo", icon:Icon(Icons.search_rounded)),
               ),
             ),
@@ -63,19 +64,25 @@ class HomeScreen extends StatelessWidget {
 
           Row(
             children: [
-              Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(border: Border.all(),),
-                margin: EdgeInsets.only(left: 20),
-                alignment: Alignment.center,
-                child: Image.network("https://asset.msi.com/resize/image/global/product/product_1675308079f2ee98e0ba4c4643c8b55101e9167bd4.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
-                  width: 90,
-                  height: 90,
-                  alignment: Alignment.center,
-                  fit: BoxFit.scaleDown,
-                ),
-              ),
+                InkWell(
+                   splashColor: Colors.cyan,
+                    onTap: (){
+                          },
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(border: Border.all(),),
+                    margin: EdgeInsets.only(left: 20),
+                    alignment: Alignment.center,
+                        child: Image.network("https://asset.msi.com/resize/image/global/product/product_1675308079f2ee98e0ba4c4643c8b55101e9167bd4.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
+                          width: 90,
+                          height: 90,
+                          alignment: Alignment.center,
+                          fit: BoxFit.scaleDown,
+                          ),
+                        ),
+                      ),
+
 
               Container(
                 width: 100,
@@ -91,6 +98,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
+
               Container(width: 100,
                 height: 100,
                 decoration: BoxDecoration(border: Border.all(),),
@@ -105,7 +113,6 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-
 
 
 
@@ -161,7 +168,7 @@ class HomeScreen extends StatelessWidget {
                 width: 100,
                 height: 100,
                 decoration: BoxDecoration(border: Border.all(),),
-                margin: EdgeInsets.only(left: 25),
+                margin: EdgeInsets.only(left: 25, top: 30),
                 alignment: Alignment.center,
                 child: Image.network("https://storage-asset.msi.com/global/picture/image/feature/nb/Prestige/Prestige13-Evo-A13M/kv-laptop.png",
                   width: 90,
@@ -173,7 +180,7 @@ class HomeScreen extends StatelessWidget {
               Container(width: 100,
                 height: 100,
                 decoration: BoxDecoration(border: Border.all(),),
-                margin: EdgeInsets.all(30),
+                margin: EdgeInsets.only(left: 30, right: 30,top: 30),
                 alignment: Alignment.center,
                 child: Image.network("https://asset.msi.com/resize/image/global/product/product_1683163894e91a6dd67466e72ede33c82aa3ff20fb.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
                   width: 90,
@@ -186,7 +193,7 @@ class HomeScreen extends StatelessWidget {
                 width: 100,
                 height: 100,
                 decoration: BoxDecoration(border: Border.all(),),
-                margin: EdgeInsets.only(right: 20),
+                margin: EdgeInsets.only(right: 20, top: 30),
                 alignment: Alignment.center,
                 child: Image.network("https://asset.msi.com/resize/image/global/product/product_16763382067718ee4143d29ee665aa678fa9acc1f1.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
                   width: 90,
@@ -237,6 +244,15 @@ class HomeScreen extends StatelessWidget {
               style: OutlinedButton.styleFrom(side: BorderSide(color: Colors.black), fixedSize: Size(500, 50), alignment: Alignment.centerLeft,),
               onPressed:() {}, icon: Icon(Icons.image_rounded),
               label: Text("Sample pohoto-2"),
+            ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(side: BorderSide(color: Colors.black), fixedSize: Size(500, 50), alignment: Alignment.centerLeft,),
+              onPressed:() {}, icon: Icon(Icons.folder),
+              label: Text("Sample Folder-Again"),
             ),
           ),
 
